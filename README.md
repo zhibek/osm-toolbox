@@ -29,7 +29,7 @@ docker build -t zhibek/osm-toolbox .
 ### Example Running Image
 
 ```
-docker run --rm -v "$(pwd):/root" -w /root zhibek/osm-toolbox osmium --version
-docker run --rm -v "$(pwd):/root" -w /root zhibek/osm-toolbox ogr2ogr --version
-docker run --rm -v "$(pwd):/root" -w /root zhibek/osm-toolbox tippecanoe --version
+docker run --rm -v "$(pwd):/workspace" -w /workspace zhibek/osm-toolbox osmium --version
+docker run --rm -v "$(pwd):/workspace" -w /workspace zhibek/osm-toolbox ogr2ogr --version
+docker run --rm -v "$(pwd):/workspace" -w /workspace zhibek/osm-toolbox tippecanoe --version
 ```
