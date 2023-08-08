@@ -17,7 +17,7 @@ do
 done
 
 # Fallback to environment vars or defaults for input variables
-INPUTS="${INPUTS:=data:data/data.fgb}" # Default: data:data/data.fgb
+INPUTS="${INPUTS:=-L data:data/data.fgb}" # Default: -L data:data/data.fgb
 OUTPUT="${OUTPUT:=data/data.mbtiles}" # Default: data/data.mbtiles
 
 # Run command using tippecanoe
