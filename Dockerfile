@@ -110,8 +110,13 @@ RUN apt-get update \
 COPY --from=build_tippecanoe /usr/local/bin/tippecanoe /usr/bin
 RUN tippecanoe --version
 
-# Copy local scripts
+# Local Scripts Prerequisites
+RUN apt-get update \
+&& apt-get install -y curl jq
+
+# Copy Local Scripts
 COPY --chmod=755 scripts /usr/local/scripts
+RUN ln -s /usr/local/scripts/osm-download.sh /usr/local/bin/osm-download
 RUN ln -s /usr/local/scripts/osm-filter.sh /usr/local/bin/osm-filter
 RUN ln -s /usr/local/scripts/osm-to-flatgeobuf.sh /usr/local/bin/osm-to-flatgeobuf
 RUN ln -s /usr/local/scripts/flatgeobuf-to-mbtiles.sh /usr/local/bin/flatgeobuf-to-mbtiles

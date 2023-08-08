@@ -12,6 +12,7 @@ A toolbox of useful OSM applications and helper commands.
 
 ## Helper Commands
 
+* `osm-download` - Download OSM PBF for area
 * `osm-filter` - Filter OSM PBF by tags
 * `osm-to-flatgeobuf` - Convert OSM PBF to FlatGeobuf format
 * `flatgeobuf-to-mbtiles` - Build MBTiles from FlatGeobuf format
