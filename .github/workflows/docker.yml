@@ -25,7 +25,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ github.event.repository.name }}
+          images: zhibek/osm-toolbox
           flavor: |
             latest=auto
           tags: |
