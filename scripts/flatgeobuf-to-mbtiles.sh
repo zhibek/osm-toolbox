@@ -23,7 +23,7 @@ OUTPUT="${OUTPUT:=data/data.mbtiles}" # Default: data/data.mbtiles
 # Run command using tippecanoe
 tippecanoe -zg \
 -o $OUTPUT \
--L $INPUTS \
+$INPUTS \
 --drop-densest-as-needed \
 --force
 
