@@ -118,5 +118,6 @@ RUN apt-get update \
 COPY --chmod=755 scripts /usr/local/scripts
 RUN ln -s /usr/local/scripts/osm-download.sh /usr/local/bin/osm-download
 RUN ln -s /usr/local/scripts/osm-filter.sh /usr/local/bin/osm-filter
+RUN ln -s /usr/local/scripts/osm-to-geojson.sh /usr/local/bin/osm-to-geojson
 RUN ln -s /usr/local/scripts/osm-to-flatgeobuf.sh /usr/local/bin/osm-to-flatgeobuf
 RUN ln -s /usr/local/scripts/flatgeobuf-to-mbtiles.sh /usr/local/bin/flatgeobuf-to-mbtiles
