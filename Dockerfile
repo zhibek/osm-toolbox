@@ -112,7 +112,7 @@ RUN tippecanoe --version
 
 # Local Scripts Prerequisites
 RUN apt-get update \
-&& apt-get install -y curl jq
+&& apt-get install -y curl jq git
 
 # Copy Local Scripts
 COPY --chmod=755 scripts /usr/local/scripts
