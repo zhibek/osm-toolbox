@@ -110,6 +110,14 @@ RUN apt-get update \
 COPY --from=build_tippecanoe /usr/local/bin/tippecanoe /usr/bin
 RUN tippecanoe --version
 
+# Mapshaper Runtime Prerequisites
+RUN apt-get update \
+&& apt-get install -y nodejs npm
+
+# Mapshaper Binary
+RUN npm install -g mapshaper
+RUN mapshaper --version
+
 # Local Scripts Prerequisites
 RUN apt-get update \
 && apt-get install -y curl jq git
